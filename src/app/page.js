@@ -1,19 +1,14 @@
 "use client";
 import { Header } from "@/components/Header";
-import { Image1 } from "@/components/img/LandingImage";
 import Lottie from "lottie-react";
 import Image from "next/image";
-import hamster from ".././hamster.json";
 import machine from ".././machine.json";
 import intro from ".././iconIntro.json";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import styles from "@/app/animationStyles.module.css";
 import { motion } from "framer-motion";
 import { ButtonIcon } from "@/components/icon/icon";
 import { Cards } from "@/components/cards/cards";
-import { Alert, Card, Carousel } from "flowbite-react";
-import { LogoFooter } from "@/components/LogoFooter";
+import { Carousel } from "flowbite-react";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -21,7 +16,7 @@ export default function Home() {
   const latestWorkData = [
     {
       href: "https://next-js-todolist-dnd.vercel.app/",
-      src: "/./todolist.png",
+      src: "/todolist.png",
       alt: "todo list pict",
       title: "Todo List App",
       desc: "Todo List with Drag and Drop features uses react-beautiful-dnd saved in localstorage.",
@@ -29,7 +24,7 @@ export default function Home() {
     },
     {
       href: "https://next-js-tailwind-address-book.vercel.app/",
-      src: "/./addressbook.png",
+      src: "/addressbook.png",
       alt: "address book pict",
       title: "Address Book App",
       desc: "Address Book Website uses Next.js & Tailwind with search engine, infinite scroll, and night mode feature.",
@@ -37,7 +32,7 @@ export default function Home() {
     },
     {
       href: "https://next-js-tailwind-five.vercel.app/",
-      src: "/./travel.png",
+      src: "/travel.png",
       alt: "travel website pict",
       title: "Travel Website",
       desc: "Responsive Travel Website uses Next.js & Tailwind, slicing from",
@@ -45,7 +40,7 @@ export default function Home() {
     },
     {
       href: "https://next-js-tailwind-fashion-ecommerce.vercel.app/",
-      src: "/./ecommerce.png",
+      src: "/ecommerce.png",
       alt: "e-commerce website pict",
       title: "E-commerce Website",
       desc: `Responsive Fashion E-commerce Website uses Next.js & Tailwind, slicing from`,

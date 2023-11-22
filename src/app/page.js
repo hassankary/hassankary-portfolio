@@ -185,7 +185,7 @@ export default function Home() {
           >
             <div className=" w-full px-0 pb-0">
               <div className="flex flex-col group">
-                <div className=" flex justify-center bg-gradient-to-t from-[#190108] to-[#5B0E4E] rounded-t-full transition group-hover:shadow-[#FFC93E] group-hover:shadow-[0_-25px_200px_-100px]">
+                <div className=" flex justify-center bg-gradient-to-t from-[#190108] to-[#5B0E4E] rounded-t-full transition shadow-[#FFC93E] shadow-[0_-25px_200px_-90px] lg:shadow-none group-hover:shadow-[#FFC93E] group-hover:shadow-[0_-25px_200px_-100px]">
                   <div className="absolute flex px-10 lg:px-0 lg:pl-10 min-h-[50px] space-x-20 xl:space-x-28">
                     <motion.div
                       animate={{ y: [0, 80, 0] }}

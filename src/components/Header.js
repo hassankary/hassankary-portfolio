@@ -168,7 +168,7 @@ export const Header = ({ params }) => {
       <div
         className={`${
           show ? "bg-black bg-opacity-20 md:bg-opacity-10" : "bg-transparent"
-        } flex fixed z-50 px-[32px] sm:px-[60px] md:px-[100px] w-full py-[11px] md:py-[15px] text-white backdrop-blur-md justify-between`}
+        } flex fixed z-50 px-[27px] sm:px-[60px] md:px-[100px] w-full py-[11px] md:py-[15px] text-white backdrop-blur-md justify-between`}
       >
         <Link href={"/"}>
           <div className="flex h-[53px] space-x-2 items-center text-[22px] font-bold">

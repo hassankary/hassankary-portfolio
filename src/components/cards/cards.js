@@ -26,7 +26,7 @@ export const Cards = ({ href, src, alt, title, desc, link }) => {
           </div>
         </div>
         <div className="flex w-full pb-6 px-9 transition rounded-b-xl">
-          <button className=" font-bold px-3 py-2 transition  hover:bg-gradient-to-tr hover:from-[#401241] hover:to-[#710e70] bg-gradient-to-tr from-[#29002A] to-[#540052] rounded-lg">
+          <button className=" font-bold px-3 py-2 transition hover:bg-gradient-to-tr hover:from-[#401241] hover:to-[#710e70] bg-gradient-to-tr from-[#29002A] to-[#540052] text-white rounded-lg">
             <Link className="flex justify-center items-center gap-2" href={href} target="_blank">
               GO
               <svg

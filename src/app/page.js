@@ -287,7 +287,7 @@ export default function Home() {
             <Carousel>
               <div className="px-4 sm:px-[100px] lg:p-12">
                 <div className=" rounded-xl shadow-xl">
-                  <div className="flex py-2 text-center justify-center text-[25px] font-extrabold rounded-t-xl bg-gradient-to-t from-[#30102b] to-[#5B0E4E]">
+                  <div className="flex py-2 text-center text-white justify-center text-[25px] font-extrabold rounded-t-xl bg-gradient-to-t from-[#30102b] to-[#5B0E4E]">
                     Professional Summary
                   </div>
                   <p className=" text-black pt-6 pb-8 px-12 md:px-24 lg:px-12 text-[18px] font-extrabold rounded-b-xl bg-white leading-[30px]">
@@ -300,7 +300,7 @@ export default function Home() {
               </div>
               <div className="px-4 sm:px-[100px] lg:p-12">
                 <div className=" rounded-xl shadow-xl">
-                  <div className="flex py-2 text-center justify-center text-[25px] font-extrabold rounded-t-xl bg-gradient-to-t from-[#30102b] to-[#5B0E4E] ">
+                  <div className="flex py-2 text-center text-white justify-center text-[25px] font-extrabold rounded-t-xl bg-gradient-to-t from-[#30102b] to-[#5B0E4E] ">
                     Skills
                   </div>
                   <div className="flex-col text-center text-white pt-6 pb-8 px-12 md:px-24 lg:px-12 text-[10px] sm:text-[13px] md:text-[18px] lg:text-[15px] xl:text-[18px] font-extrabold rounded-b-xl bg-white leading-[30px]">

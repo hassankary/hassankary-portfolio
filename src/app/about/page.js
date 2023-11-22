@@ -217,7 +217,7 @@ export default function About() {
                   <div key={idx} className=" border-b-2">
                     <div className="pb-[5px]">
                       <h1 className=" text-lg font-semibold">{data.place}</h1>
-                      <h1 className=" text-lg font-semibold">{data.status}</h1>
+                      <h1 className=" text-lg text-[#FF4268] font-semibold">{data.status}</h1>
                       <h1 className=" text-lg text-[#FF4268] font-semibold">
                         {data.year}
                       </h1>

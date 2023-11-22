@@ -93,12 +93,12 @@ export default function About() {
   return (
     <>
       <Header params={page} />
-      <div className="z-30 flex-col w-full pt-[109px] pb-[100px] px-8 sm:px-[100px] md:px-[135px] lg:px-[150px] xl:px-[200px] bg-gradient-to-t from-[#29002A] via-[#540052] to-[#29002A] justify-center lg:justify-between">
+      <div className="z-30 flex-col w-full pt-[109px] pb-[100px] px-4 sm:px-[100px] md:px-[135px] lg:px-[150px] xl:px-[200px] bg-gradient-to-t from-[#29002A] via-[#540052] to-[#29002A] text-white justify-center lg:justify-between">
         <motion.div
           animate={{ y: [-20, 0], opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ type: "tween", duration: 0.2 }}
-          className="flex flex-col px-10 lg:px-14 py-10 space-y-7 lg:space-y-0 bg-black bg-opacity-40 text-slate-50 shadow-[#FFC93E] shadow-[0_25px_200px_-80px] lg:flex-row lg:justify-center w-full rounded-xl"
+          className="flex flex-col px-10 lg:px-14 py-10 space-y-7 lg:space-y-0 bg-black bg-opacity-40 text-white shadow-[#FFC93E] shadow-[0_25px_200px_-80px] lg:flex-row lg:justify-center w-full rounded-xl"
         >
           <div className="flex justify-center rounded-full ">
             <div className="w-[200px] rounded-full  ">
@@ -147,7 +147,7 @@ export default function About() {
           initial="hidden"
           whileTap={{ scale: 0.98 }}
           onClick={() => setShow({ ...show, education: !show.education })}
-          className="flex text-left justify-between items-center text-[18px] md:text-[20px] font-bold mt-5 px-10 sm:px-14 py-7 bg-gradient-to-t from-[#30102b] to-[#5B0E4E] hover:bg-gradient-to-t hover:from-[#30102b76] hover:to-[#5b0e4e90] shadow-[#FFC93E] shadow-[0_25px_200px_-20px] transition w-full rounded-2xl"
+          className="flex text-left justify-between items-center text-[18px] text-white md:text-[20px] font-bold mt-5 px-10 sm:px-14 py-7 bg-gradient-to-t from-[#30102b] to-[#5B0E4E] hover:bg-gradient-to-t hover:from-[#30102b76] hover:to-[#5b0e4e90] shadow-[#FFC93E] shadow-[0_25px_200px_-20px] transition w-full rounded-2xl"
         >
           <span>Formal Education</span>
           <span>
@@ -161,7 +161,7 @@ export default function About() {
             transition={{ type: "tween", duration: 0.6 }}
             className="px-5"
           >
-            <div className="px-7 pt-5 pb-6 space-y-5 bg-black bg-opacity-30 backdrop-blur-lg  rounded-b-xl">
+            <div className="px-7 pt-5 pb-6 space-y-5 text-white bg-black bg-opacity-30 backdrop-blur-lg  rounded-b-xl">
               {dataEducation.map((data, idx) => {
                 return (
                   <div key={idx} className=" border-b-2">
@@ -197,7 +197,7 @@ export default function About() {
           initial="hidden"
           whileTap={{ scale: 0.98 }}
           onClick={() => setShow({ ...show, experience: !show.experience })}
-          className="flex text-left justify-between items-center text-[18px] md:text-[20px] font-bold mt-5 px-10 sm:px-14 py-7 bg-gradient-to-t from-[#30102b] to-[#5B0E4E] hover:bg-gradient-to-t hover:from-[#30102b76] hover:to-[#5b0e4e90] shadow-[#FFC93E] shadow-[0_25px_200px_-31px] transition w-full rounded-2xl"
+          className="flex text-left justify-between items-center text-[18px] text-white md:text-[20px] font-bold mt-5 px-10 sm:px-14 py-7 bg-gradient-to-t from-[#30102b] to-[#5B0E4E] hover:bg-gradient-to-t hover:from-[#30102b76] hover:to-[#5b0e4e90] shadow-[#FFC93E] shadow-[0_25px_200px_-31px] transition w-full rounded-2xl"
         >
           <span>Working Experience</span>
           <span>
@@ -211,7 +211,7 @@ export default function About() {
             transition={{ type: "tween", duration: 0.6 }}
             className="px-5"
           >
-            <div className="px-7 pt-5 pb-6 space-y-5 bg-black bg-opacity-30 backdrop-blur-lg rounded-b-xl">
+            <div className="px-7 pt-5 pb-6 space-y-5 text-white bg-black bg-opacity-30 backdrop-blur-lg rounded-b-xl">
               {dataExperience.map((data, idx) => {
                 return (
                   <div key={idx} className=" border-b-2">
@@ -288,7 +288,7 @@ export default function About() {
           initial="hidden"
           whileTap={{ scale: 0.98 }}
           onClick={() => setShow({ ...show, language: !show.language })}
-          className="flex text-left justify-between items-center text-[18px] md:text-[20px] font-bold mt-5 px-10 sm:px-14 py-7 bg-gradient-to-t from-[#30102b] to-[#5B0E4E] hover:bg-gradient-to-t hover:from-[#30102b76] hover:to-[#5b0e4e90]  transition w-full rounded-2xl"
+          className="flex text-left justify-between items-center text-[18px] text-white md:text-[20px] font-bold mt-5 px-10 sm:px-14 py-7 bg-gradient-to-t from-[#30102b] to-[#5B0E4E] hover:bg-gradient-to-t hover:from-[#30102b76] hover:to-[#5b0e4e90]  transition w-full rounded-2xl"
         >
           <span>Language Skills</span>
           <span>
@@ -302,7 +302,7 @@ export default function About() {
             transition={{ type: "tween", duration: 0.6 }}
             className="px-5"
           >
-            <div className="px-7 pt-5 pb-6 space-y-5 bg-black bg-opacity-30 backdrop-blur-lg  rounded-b-xl">
+            <div className="px-7 pt-5 pb-6 space-y-5 bg-black text-white bg-opacity-30 backdrop-blur-lg  rounded-b-xl">
               <div className="flex border-b-2 items-center pb-5">
                 <span className="text-base sm:text-lg font-semibold mr-3 sm:mr-5">English</span>
                 {[1, 2, 3, 4, 5, 6, 7].map((box, idx) => {

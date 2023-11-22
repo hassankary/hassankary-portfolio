@@ -13,6 +13,7 @@ export const Cards = ({ href, src, alt, title, desc, link }) => {
           height={250}
           width={250}
           alt={alt}
+          unoptimized
         ></Image>
       </div>
       <div className="flex flex-col ">
@@ -24,7 +25,7 @@ export const Cards = ({ href, src, alt, title, desc, link }) => {
             {desc} <Link className=" hover:underline" href={link} target="_blank">{link}</Link>
           </div>
         </div>
-        <div className="flex items-end w-full pb-6 px-9 transition rounded-b-xl">
+        <div className="flex w-full pb-6 px-9 transition rounded-b-xl">
           <button className=" font-bold px-3 py-2 transition  hover:bg-gradient-to-tr hover:from-[#401241] hover:to-[#710e70] bg-gradient-to-tr from-[#29002A] to-[#540052] rounded-lg">
             <Link className="flex justify-center items-center gap-2" href={href} target="_blank">
               GO

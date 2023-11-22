@@ -54,7 +54,7 @@ export default function Home() {
       <Header params={page} />
       <div
         id="home"
-        className=" z-30 flex pt-[109px] sm:px-[100px] px-16 bg-gradient-to-b from-[#29002A] to-[#540052] justify-center lg:justify-between w-full"
+        className=" z-30 flex pt-[109px] sm:px-[100px] px-16 text-white bg-gradient-to-b from-[#29002A] to-[#540052] justify-center lg:justify-between w-full"
       >
         <div className="flex flex-col items-center lg:flex-row lg:justify-around py-[50px] w-full">
           <div className="flex flex-col justify-center lg:w-1/2 xl:w-fit space-y-3">

@@ -1,16 +1,36 @@
-import { LogoFooter } from "./LogoFooter"
+import { LogoFooter } from "./LogoFooter";
 
 const dataLogoFooter = [
-    {title: "LinkedIn", href: "linkedin.com/in/hassan-askary-hizburrahman-77ba29166", src: "/LinkedIn.svg", alt: "logo Linkedin"},
-    {title: "Github", href: "https://github.com/hassankary", src: "/Github.svg", alt: "logo Github"},
-    {title: "Gitlab", href: "https://gitlab.com/hassankary", src: "/Gitlab.svg", alt: "logo Gitlab"},
-    {title: "Instagram", href: "https://www.instagram.com/hassankary/", src: "/Instagram.svg", alt: "logo Instagram"},
-  ]; 
+  {
+    title: "LinkedIn",
+    href: "linkedin.com/in/hassan-askary-hizburrahman-77ba29166",
+    src: "/LinkedIn.svg",
+    alt: "logo Linkedin",
+  },
+  {
+    title: "Github",
+    href: "https://github.com/hassankary",
+    src: "/Github.svg",
+    alt: "logo Github",
+  },
+  {
+    title: "Gitlab",
+    href: "https://gitlab.com/hassankary",
+    src: "/Gitlab.svg",
+    alt: "logo Gitlab",
+  },
+  {
+    title: "Instagram",
+    href: "https://www.instagram.com/hassankary/",
+    src: "/Instagram.svg",
+    alt: "logo Instagram",
+  },
+];
 
 export const Footer = () => {
-    return(
-        <>
-        <div className="bg-white">
+  return (
+    <>
+      <div className="bg-white">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#29002A"
@@ -19,15 +39,22 @@ export const Footer = () => {
           ></path>
         </svg>
       </div>
-      <div className="flex bg-white py-[40px] pb-[80px] sm:py-[120px] sm:mt-[-100px] md:mt-[-80px] lg:mt-[-100px] justify-center items-center">
+      <div className="flex flex-col bg-white pt-[40px] sm:pt-[120px] sm:mt-[-100px] md:mt-[-80px] lg:mt-[-100px] justify-center items-center">
         <div className="flex flex-row space-x-2 md:space-x-4">
           {dataLogoFooter.map((data, idx) => {
-            return(
-              <LogoFooter title={data.title} src={data.src} href={data.href} alt={data.alt} key={idx}/>
-            )
+            return (
+              <LogoFooter
+                title={data.title}
+                src={data.src}
+                href={data.href}
+                alt={data.alt}
+                key={idx}
+              />
+            );
           })}
         </div>
+        <div className="w-full text-center font-bold text-base sm:text-lg py-[40px] sm:py-[60px] text-black">Copyright &copy; 2023 Hassan Askary.</div>
       </div>
-        </>
-    )
-}
+    </>
+  );
+};

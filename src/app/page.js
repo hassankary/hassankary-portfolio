@@ -146,7 +146,7 @@ export default function Home() {
                 }
                 target="_blank"
               >
-                <div className="flex px-6 py-[19px] items-center space-x-2 rounded-full bg-gradient-to-r from-[#FE573B] to-[#FF4268] transition ease-out hover:scale-105">
+                <div className="flex px-6 py-[19px] items-center space-x-2 rounded-full bg-gradient-to-r from-[#FE573B] to-[#FF4268] transition ease-out hover:scale-105 shadow-[#FFC93E] shadow-[0_-5px_200px_-5px]">
                   <span className=" animate-pulse text-center items-center font-semibold">
                     Download CV
                   </span>
@@ -293,7 +293,7 @@ export default function Home() {
                   <p className=" text-black pt-6 pb-8 px-12 md:px-24 lg:px-12 text-[18px] font-extrabold rounded-b-xl bg-white leading-[30px]">
                     Able to ensuring that all work is effective, appropriate and
                     delivered within agreed timescales. Able to work under
-                    pressure. Always bereliable, hardworking, and eager to
+                    pressure. Always be reliable, hardworking, and eager to
                     learn.
                   </p>
                 </div>

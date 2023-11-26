@@ -3,7 +3,7 @@ import { LogoFooter } from "./LogoFooter";
 const dataLogoFooter = [
   {
     title: "LinkedIn",
-    href: "linkedin.com/in/hassan-askary-hizburrahman-77ba29166",
+    href: "https://www.linkedin.com/in/hassan-askary-hizburrahman-77ba29166/",
     src: "/LinkedIn.svg",
     alt: "logo Linkedin",
   },

@@ -6,13 +6,7 @@ import { Dropdown } from "flowbite-react";
 import {
   HiDesktopComputer,
   HiPhoneIncoming,
-  HiOutlinePhone,
   HiUser,
-  HiShoppingCart,
-  HiMenu,
-  HiCog,
-  HiCurrencyDollar,
-  HiLogout,
   HiViewGrid,
 } from "react-icons/hi";
 import { IconBar } from "./icon/iconBar";
@@ -26,8 +20,6 @@ export const Header = ({ params }) => {
     about: false,
     work: false,
   });
-
-  // console.log("params =>", params);
 
   const NavLogo = ({ color, width, height }) => {
     return (
@@ -191,22 +183,22 @@ export const Header = ({ params }) => {
               Home
             </div>
           </Link>
-          <Link href={"/about"}>
-            <div
-              onClick={aboutPage}
-              className={`${bold?.about} flex h-[53px] space-x-1 hover:text-[#FF4265] transition items-center`}
-            >
-              {/* {isLogo?.about && (<NavLogo height={16} width={16} color={"#FD653D"} />)} */}
-              About
-            </div>
-          </Link>
           <Link href={"./#latestWork"}>
             <div
               onClick={workPage}
               className={`${bold?.work} flex h-[53px] space-x-1 hover:text-[#FF4265] transition items-center`}
             >
-              {/* {isLogo?.services && (<NavLogo height={16} width={16} color={"#FD653D"} />)} */}
+              {/* {isLogo?.about && (<NavLogo height={16} width={16} color={"#FD653D"} />)} */}
               Work
+            </div>
+          </Link>
+          <Link href={"/about"}>
+            <div
+              onClick={aboutPage}
+              className={`${bold?.about} flex h-[53px] space-x-1 hover:text-[#FF4265] transition items-center`}
+            >
+              {/* {isLogo?.services && (<NavLogo height={16} width={16} color={"#FD653D"} />)} */}
+              About
             </div>
           </Link>
         </div>
@@ -227,15 +219,15 @@ export const Header = ({ params }) => {
             <Dropdown.Item icon={HiViewGrid} as="a" href={"/"}>
               Home
             </Dropdown.Item>
-            <Dropdown.Item icon={HiUser} as="a" href={"/about"}>
-              About
-            </Dropdown.Item>
             <Dropdown.Item
               icon={HiDesktopComputer}
               as="a"
               href={"./#latestWork"}
             >
               Latest Work
+            </Dropdown.Item>
+            <Dropdown.Item icon={HiUser} as="a" href={"/about"}>
+              About
             </Dropdown.Item>
             <Dropdown.Item icon={HiPhoneIncoming} as="a" href={"mailto:hassanaskary29@gmail.com"}>
               Contact

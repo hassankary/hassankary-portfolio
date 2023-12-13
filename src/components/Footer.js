@@ -15,7 +15,7 @@ const dataLogoFooter = [
   },
   {
     title: "Gitlab",
-    href: "https://gitlab.com/hassankary",
+    href: "https://gitlab.com/hassanaskary29",
     src: "/Gitlab.svg",
     alt: "logo Gitlab",
   },

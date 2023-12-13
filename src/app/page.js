@@ -142,7 +142,7 @@ export default function Home() {
             >
               <Link
                 href={
-                  "https://drive.google.com/file/d/14AOJGFpcGOyEIOQuuY-7FO01HP326gmd/view?usp=sharing"
+                  "https://drive.google.com/file/d/1BDoK9aRRV7u9XrMBSV22Tu5WFj-TT1Us/view"
                 }
                 target="_blank"
               >

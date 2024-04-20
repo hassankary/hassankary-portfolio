@@ -25,6 +25,16 @@ export default function About() {
 
   const dataExperience = [
     {
+      place: "AWANIO / PT Awan Komputasi Teknologi",
+      status: "Frontend Developer Internship",
+      year: "(Dec 2023 - Present)",
+      jobdesc1: "Slicing Responsive Awanio Website landing page, product, solution, and partner uses Astro.js and Tailwind",
+      jobdesc2: "Slicing Responsive Awanio Docs Website uses Next.js and Tailwind",
+      jobdesc3: "Unit testing Awanio Repo V3 uses Playwright",
+      jobdesc4: "",
+      jobdesc5: "",
+    },
+    {
       place: "AKSESMU / PT Sumber Trijaya Lestari",
       status: "General Affair Internship",
       year: "(Nov 2022 - May 2023)",
@@ -92,6 +102,7 @@ export default function About() {
 
   return (
     <>
+      <title>Hassan Askary - Portfolio</title>
       <Header params={page} />
       <div className="z-30 flex-col w-full pt-[109px] pb-[100px] px-4 sm:px-[100px] md:px-[135px] lg:px-[150px] xl:px-[200px] bg-gradient-to-t from-[#29002A] via-[#540052] to-[#29002A] text-white justify-center lg:justify-between">
         <motion.div
@@ -104,7 +115,7 @@ export default function About() {
             <div className="w-[200px] rounded-full  ">
               <Image
                 className="rounded-full  "
-                src={"/HassanImage.jpeg"}
+                src={"/HassanImage2.jpg"}
                 width={200}
                 height={200}
                 alt="hassan image"

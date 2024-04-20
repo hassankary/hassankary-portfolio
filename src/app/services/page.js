@@ -10,10 +10,10 @@ export default function Services() {
       <div className="flex pt-[109px] bg-gradient-to-r from-[#29002A] to-[#540052] min-h-screen justify-center px-[100px]">
         <div className="flex py-[50px] justify-center">
           <div className="w-[50%] space-y-7">
-            <p className="bg-clip-text text-transparent bg-gradient-to-r from-[#FE573B] to-[#FF4265] font-extrabold">
-              WORK..
+            <p className="bg-clip-text text-[52px] uppercase text-transparent bg-gradient-to-r from-[#FE573B] to-[#FF4265] font-extrabold">
+              my portfolio
             </p>
-            <p className=" text-[52px] leading-[63px]">
+            <p className="text-[52px] leading-[63px]">
               Warmth and comfort for{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FE573B] to-[#FF4265] font-extrabold">
               Work

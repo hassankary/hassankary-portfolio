@@ -119,6 +119,8 @@ export default function About() {
                 width={200}
                 height={200}
                 alt="hassan image"
+                quality={100}
+                unoptimized
               />
             </div>
           </div>

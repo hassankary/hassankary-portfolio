@@ -291,9 +291,9 @@ export default function Home() {
                     Professional Summary
                   </div>
                   <p className=" text-black pt-6 pb-8 px-12 md:px-24 lg:px-12 text-[18px] font-extrabold rounded-b-xl bg-white leading-[30px]">
-                    Able to ensuring that all work is effective, appropriate and
-                    delivered within agreed timescales. Able to work under
-                    pressure. Always be reliable, hardworking, and eager to
+                    Able to ensure that all tasks are performed effectively, appropriately, and
+                    delivered within agreed timescales. Able to work well under
+                    pressure. Consistenly reliable, diligent, and eager to
                     learn.
                   </p>
                 </div>

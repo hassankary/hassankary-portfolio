@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export const Cards = ({ href, src, alt, title, desc, link }) => {
   return (
-    <div className="bg-white h-full rounded-[32px] shadow-xl ">
-      <div className="flex overflow-hidden justify-center items-center rounded-t-[32px] bg-gradient-to-t from-[#30102b] to-[#5B0E4E] ">
+    <div className="h-fit bg-transparent shadow-xl ">
+      <div className="flex overflow-hidden justify-center items-center rounded-t-3xl bg-gradient-to-t from-[#30102b] to-[#5B0E4E] ">
         <Image
           src={src}
           className=" w-full"
@@ -16,18 +16,21 @@ export const Cards = ({ href, src, alt, title, desc, link }) => {
           unoptimized
         ></Image>
       </div>
-      <div className="flex flex-col ">
-        <div className="flex-col py-6 pb-4 px-9 ">
+      <div className="flex flex-col h-full">
+        <div className="py-4 bg-white">
+
+        <div className="flex-col px-9 lg:h-[132px] xl:h-[163px] overflow-auto">
           <h1 className="mb-3 truncate overflow-hidden text-black text-[20px] font-extrabold leading-[30px] ">
             {title}
           </h1>
           <div className="text-ellipsis overflow-hidden text-black text-[15px] font-semibold leading-[30px] ">
-            {desc} <Link className=" hover:underline" href={link} target="_blank">{link}</Link>
+            {desc} <Link className="underline font-bold" href={link} target="_blank">{link !== "" && "figma"}</Link>
           </div>
         </div>
-        <div className="flex w-full pb-6 px-9 transition rounded-b-xl">
-          <button className=" font-bold px-3 py-2 transition hover:bg-gradient-to-tr hover:from-[#401241] hover:to-[#710e70] bg-gradient-to-tr from-[#29002A] to-[#540052] text-white rounded-lg">
-            <Link className="flex justify-center items-center gap-2" href={href} target="_blank">
+        </div>
+        <div className="flex justify-center w-full transition rounded-b-xl">
+          <button className="flex w-full justify-center font-bold px-3 py-2 bg-gradient-to-b from-[#FF4265] to-[#FE573B] hover:bg-gradient-to-tr hover:from-[black] hover:to-[black] text-white rounded-b-3xl transition-all">
+            <Link className="flex w-full justify-center items-center gap-2 active:scale-95 transition-all" href={href} target="_blank">
               GO
               <svg
                 xmlns="http://www.w3.org/2000/svg"

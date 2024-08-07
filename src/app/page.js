@@ -157,7 +157,7 @@ export default function Home() {
               </Link>
               <div className="flex px-6 py-[19px] items-center">
                 <Link href={"https://github.com/hassankary"} target="_blank">
-                  <span className="font-bold transition hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-[#FE573B] hover:to-[#FF4265] ">
+                  <span className="font-bold transition-all hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-[#FE573B] hover:to-[#FF4265] ">
                     Github
                   </span>
                 </Link>

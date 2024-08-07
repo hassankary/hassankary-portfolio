@@ -11,7 +11,10 @@ import {
   MailIcon,
   WhatsappIcon,
 } from "@/components/icon/iconAbout";
-import { motion } from "framer-motion";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdMarkEmailUnread, MdOutgoingMail } from "react-icons/md";
+import { IoMdMailOpen } from "react-icons/io";
+import { motion as m } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -27,73 +30,82 @@ export default function About() {
     {
       place: "AWANIO / PT Awan Komputasi Teknologi",
       status: "Frontend Developer Internship",
-      year: "(Dec 2023 - Present)",
-      jobdesc1: "Build a responsive Awanio Website (landing page, product, solution, and partner) uses Astro.js and Tailwind",
-      jobdesc2: "Build a responsive Awanio Docs Website uses Next.js and Tailwind",
-      jobdesc3: "Unit testing Awanio Repo V3 uses Playwright",
-      jobdesc4: "",
-      jobdesc5: "",
+      year: "Dec 2023 - Present",
+      jobdesc: [
+        "Developed a responsive Awanio website (landing page, product, solution, and partner) using Astro.js and Tailwind.",
+        "Created a responsive Awanio Docs website using Next.js and Tailwind.",
+        "Conducted unit testing for the Awanio Repo V3 using Playwright.",
+      ],
     },
     {
       place: "AKSESMU / PT Sumber Trijaya Lestari",
       status: "General Affair Internship",
-      year: "(Nov 2022 - May 2023)",
-      jobdesc1: "Reimburse employees BBM",
-      jobdesc2: "Create a PB (Request) letter",
-      jobdesc3: "Create a PAR (Approval) letter",
-      jobdesc4: "Create a LPB (Receipt) letter",
-      jobdesc5: "Create a NTTB (Bill) letter",
+      year: "Nov 2022 - May 2023",
+      jobdesc: [
+        "Reimbursed employees for fuel expenses (BBM).",
+        "Created PB (Request) letters.",
+        "Drafted and delivered PAR (Approval) letters.",
+        "Issued PO (Purchase Order) letters.",
+        "Prepared LPB (Receipt) letters.",
+        "Generated NTTB (Bill) letters",
+      ],
     },
     {
       place: "STARBUCKS / PT Sari Coffee Indonesia",
       status: "Part Time Barista",
-      year: "(Apr - Oct 2021)",
-      jobdesc1: "Responsible for customer orders",
-      jobdesc2: "Responsible for cleaning the area",
-      jobdesc3: "Responsible for availability of beverage ingredients",
-      jobdesc4: "Responsible for sales result",
-      jobdesc5: "Stock opname",
+      year: "Apr - Oct 2021",
+      jobdesc: [
+        "Prepared and served beverages and food items according to Starbucks standards.",
+        "Provided exceptional customer service, including taking orders and addressing customer concerns.",
+        "Managed cash transactions and operated the register accurately.",
+        "Maintained cleanliness and organization of work areas and customer spaces.",
+        "Conducted stock opname and monitored inventory levels; replenished supplies as needed.",
+        "Responsible for achieving sales targets and contributing to overall sales results.",
+        "Participated in training new baristas and actively contributed to team development.",
+      ],
     },
     {
       place: "PPIKSN BATAN / Badan Tenaga Nuklir Nasional",
       status: "Human Resources Internship",
-      year: "(Oct 2020 - Dec 2020)",
-      jobdesc1: "Registering the attendance of employee development activities",
-      jobdesc2: "Updating employee data on SILat BATAN website",
-      jobdesc3: "Create an employee development certificate",
-      jobdesc4: "Updating employee bezetting",
-      jobdesc5: "",
+      year: "Oct 2020 - Dec 2020",
+      jobdesc: [
+        "Registered attendance for employee development activities.",
+        "Updated employee data on the SILat BATAN website.",
+        "Created employee development certificates",
+        "Updated employee scheduling and assignments.",
+      ],
     },
     {
       place: "MOTOMOTO MUSEUM / PT Utopia Satu Raja",
       status: "Museum Assistant",
-      year: "(Feb - Oct 2019)",
-      jobdesc1: "Visitors Guide",
-      jobdesc2: "Control the visitors flow",
-      jobdesc3: "Explains the description of each art installation",
-      jobdesc4: "",
-      jobdesc5: "",
+      year: "Feb - Oct 2019",
+      jobdesc: [
+        "Managed visitor flow to ensure smooth and organized access to installations.",
+        "Explained the description and significance of each art installation to enhance visitor experience.",
+        "Provided information and answered questions about artworks, artists, and museum facilities.",
+        "Assisted with crowd control and maintained a welcoming environment for all visitors.",
+      ],
     },
   ];
 
   const dataEducation = [
     {
       place: "Universitas Negeri Jakarta",
-      year: "(2017-2023)",
+      year: "2017-2023",
       faculty: "Faculty of Economics",
       major: "Management Major",
       gpa: "GPA of 3.46",
     },
     {
       place: "Universitas Padjadjaran",
-      year: "(2016-2017)",
+      year: "2016-2017",
       faculty: "Faculty of Fisheries and Marine Science",
       major: "Fisheries Major",
       gpa: "GPA of 3.00",
     },
     {
       place: "SMAN 7 Tangerang Selatan",
-      year: "(2013-2016)",
+      year: "2013-2016",
       faculty: "Natural Sciences Major",
       major: "",
       gpa: "",
@@ -105,7 +117,7 @@ export default function About() {
       <title>Hassan Askary - Portfolio</title>
       <Header params={page} />
       <div className="z-30 flex-col w-full pt-[109px] pb-[100px] px-4 sm:px-[100px] md:px-[135px] lg:px-[150px] xl:px-[200px] bg-gradient-to-t from-[#29002A] via-[#540052] to-[#29002A] text-white justify-center lg:justify-between">
-        <motion.div
+        <m.div
           animate={{ y: [-20, 0], opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ type: "tween", duration: 0.2 }}
@@ -131,17 +143,21 @@ export default function About() {
             <div className="pb-3">
               <span>@hassankary</span>
             </div>
-            <div className="flex justify-center lg:justify-start items-center ">
-              <span className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] mr-[2px]"><LocationIcon/></span>
+            <div className="flex justify-center font-normal lg:justify-start items-center ">
+              <span className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] mr-[2px]">
+                <FaLocationDot />
+              </span>
               <span>South Tangerang (BSD)</span>
             </div>
-            <div className="flex justify-center lg:justify-start items-center ">
-              <span className="w-[16px] h-[16px] sm:w-[19px] sm:h-[19px] mr-[6px]"><MailIcon/></span>
+            <div className="flex justify-center font-normal lg:justify-start items-center ">
+              <span className="w-[16px] h-[16px] sm:w-[19px] sm:h-[19px] mr-[6px]">
+                <IoMdMailOpen />
+              </span>
               <span>hassanaskary29@gmail.com</span>
             </div>
           </div>
-        </motion.div>
-        <motion.button
+        </m.div>
+        <m.button
           variants={{
             hidden: {
               x: -30,
@@ -166,32 +182,34 @@ export default function About() {
           <span>
             <IconEducation />
           </span>
-        </motion.button>
+        </m.button>
         {show.education && (
-          <motion.div
-            animate={{ y: [-2, 0], opacity: 1 }}
-            initial={{ opacity: 0.5 }}
-            transition={{ type: "tween", duration: 0.6 }}
-            className="px-5"
-          >
-            <div className="px-7 pt-5 pb-6 space-y-5 text-white bg-black bg-opacity-30 backdrop-blur-lg  rounded-b-xl">
-              {dataEducation.map((data, idx) => {
-                return (
-                  <div key={idx} className=" border-b-2">
-                    <h1 className=" text-lg font-semibold">{data.place}</h1>
-                    <h1 className=" text-lg text-[#FF4268] font-semibold">
-                      {data.year}
-                    </h1>
-                    <p>{data.faculty}</p>
-                    <p>{data.major}</p>
-                    <p className="mb-5">{data.gpa}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </motion.div>
+          <div className="overflow-hidden">
+            <m.div
+              initial={{ y: "-50%" }}
+              animate={{ y: "0%" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="px-5"
+            >
+              <div className="px-7 pt-5 pb-6 space-y-5 text-white bg-black bg-opacity-30 backdrop-blur-lg  rounded-b-xl">
+                {dataEducation.map((data, idx) => {
+                  return (
+                    <div key={idx} className=" border-b-2">
+                      <h1 className="text-lg font-bold">{data.place}</h1>
+                      <h1 className="w-fit px-2 text-lg text-[#FF4268] font-semibold border border-1 border-[#FF4268] rounded-md">
+                        {data.year}
+                      </h1>
+                      <p>{data.faculty}</p>
+                      <p>{data.major}</p>
+                      <p className="mb-5">{data.gpa}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </m.div>
+          </div>
         )}
-        <motion.button
+        <m.button
           variants={{
             hidden: {
               x: -30,
@@ -216,73 +234,47 @@ export default function About() {
           <span>
             <IconExperience />
           </span>
-        </motion.button>
+        </m.button>
         {show.experience && (
-          <motion.div
-            animate={{ y: [-2, 0], opacity: 1 }}
-            initial={{ opacity: 0.5 }}
-            transition={{ type: "tween", duration: 0.6 }}
-            className="px-5"
-          >
-            <div className="px-7 pt-5 pb-6 space-y-5 text-white bg-black bg-opacity-30 backdrop-blur-lg rounded-b-xl">
-              {dataExperience.map((data, idx) => {
-                return (
-                  <div key={idx} className=" border-b-2">
-                    <div className="pb-[5px]">
-                      <h1 className=" text-lg font-semibold">{data.place}</h1>
-                      <h1 className=" text-lg text-[#FF4268] font-semibold">{data.status}</h1>
-                      <h1 className=" text-lg text-[#FF4268] font-semibold">
-                        {data.year}
-                      </h1>
+          <div className="overflow-hidden">
+            <m.div
+              initial={{ y: "-50%" }}
+              animate={{ y: "0%" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="px-5"
+            >
+              <div className="px-7 pt-5 pb-6 space-y-5 text-white bg-black bg-opacity-30 backdrop-blur-lg rounded-b-xl">
+                {dataExperience.map((data, idx) => {
+                  return (
+                    <div key={idx} className=" border-b-2">
+                      <div className="flex flex-col justify-center pb-[5px]">
+                        <h1 className="font-bold text-lg">{data.place}</h1>
+                        <h1 className="flex w-fit sm:px-2 my-1 text-lg text-[#FF4268] sm:text-white font-semibold bg-none sm:bg-gradient-to-r from-[#FE573B] to-[#FF4268] rounded-md">
+                          {data.status}
+
+                        </h1>
+                        <h1 className="w-fit px-2 text-lg text-[#FF4268] font-semibold border border-1 border-[#FF4268] rounded-md">
+                          {data.year}
+                        </h1>
+                      </div>
+                      <div>
+                        <ul>
+                          {data.jobdesc.map((d, i) => {
+                            return(
+
+                              <li key={i} className={ i === data.jobdesc.length - 1  ? "list-disc list-inside mb-5" : `list-disc list-inside`}>{d}</li>
+                            )
+                          })}
+                        </ul>
+                      </div>
                     </div>
-                    <div>
-                      <ul>
-                        <li
-                          className={
-                            data.jobdesc1 !== "" ? `list-disc list-inside` : ""
-                          }
-                        >
-                          {data.jobdesc1}
-                        </li>
-                        <li
-                          className={
-                            data.jobdesc2 !== "" ? `list-disc list-inside` : ""
-                          }
-                        >
-                          {data.jobdesc2}
-                        </li>
-                        <li
-                          className={
-                            data.jobdesc3 !== "" ? `list-disc list-inside` : ""
-                          }
-                        >
-                          {data.jobdesc3}
-                        </li>
-                        <li
-                          className={
-                            data.jobdesc4 !== "" ? `list-disc list-inside` : ""
-                          }
-                        >
-                          {data.jobdesc4}
-                        </li>
-                        <li
-                          className={
-                            data.jobdesc5 !== ""
-                              ? `list-disc list-inside mb-5`
-                              : "mb-5"
-                          }
-                        >
-                          {data.jobdesc5}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </motion.div>
+                  );
+                })}
+              </div>
+            </m.div>
+          </div>
         )}
-        <motion.button
+        <m.button
           variants={{
             hidden: {
               x: -10,
@@ -307,47 +299,62 @@ export default function About() {
           <span>
             <LanguageIcon />
           </span>
-        </motion.button>
+        </m.button>
         {show?.language && (
-          <motion.div
-            animate={{ y: [-2, 0], opacity: 1 }}
-            initial={{ opacity: 0.5 }}
-            transition={{ type: "tween", duration: 0.6 }}
-            className="px-5"
-          >
-            <div className="px-7 pt-5 pb-6 space-y-5 bg-black text-white bg-opacity-30 backdrop-blur-lg  rounded-b-xl">
-              <div className="flex border-b-2 items-center pb-5">
-                <span className="text-base sm:text-lg font-semibold mr-3 sm:mr-5">English</span>
-                {[1, 2, 3, 4, 5, 6, 7].map((box, idx) => {
-                  return (
-                    <span key={idx} className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]">
-                      <CircleFilledIcon />
-                    </span>
-                  );
-                })}
-                {[1, 2, 3].map((box, idx) => {
-                  return (
-                    <span key={idx} className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]">
-                      <CircleIcon />
-                    </span>
-                  );
-                })}
+          <div className="overflow-hidden">
+            <m.div
+              initial={{ y: "-50%" }}
+              animate={{ y: "0%" }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="px-5"
+            >
+              <div className="px-7 pt-5 pb-6 space-y-5 bg-black text-white bg-opacity-30 backdrop-blur-lg  rounded-b-xl">
+                <div className="flex border-b-2 items-center pb-5">
+                  <span className="text-base sm:text-lg font-semibold mr-3 sm:mr-5">
+                    English
+                  </span>
+                  {[1, 2, 3, 4, 5, 6, 7].map((box, idx) => {
+                    return (
+                      <span
+                        key={idx}
+                        className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]"
+                      >
+                        <CircleFilledIcon />
+                      </span>
+                    );
+                  })}
+                  {[1, 2, 3].map((box, idx) => {
+                    return (
+                      <span
+                        key={idx}
+                        className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]"
+                      >
+                        <CircleIcon />
+                      </span>
+                    );
+                  })}
+                </div>
+                <div className="flex border-b-2 items-center pb-5">
+                  <span className="text-base sm:text-lg font-semibold mr-3 sm:mr-5">
+                    Bahasa
+                  </span>
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((box, idx) => {
+                    return (
+                      <span
+                        key={idx}
+                        className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]"
+                      >
+                        <CircleFilledIcon />
+                      </span>
+                    );
+                  })}
+                  <span className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]">
+                    <CircleIcon />
+                  </span>
+                </div>
               </div>
-              <div className="flex border-b-2 items-center pb-5">
-                <span className="text-base sm:text-lg font-semibold mr-3 sm:mr-5">Bahasa</span>
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((box, idx) => {
-                  return (
-                    <span key={idx} className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]">
-                      <CircleFilledIcon />
-                    </span>
-                  );
-                })}
-                <span className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]">
-                  <CircleIcon />
-                </span>
-              </div>
-            </div>
-          </motion.div>
+            </m.div>
+          </div>
         )}
       </div>
       <Footer />

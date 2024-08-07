@@ -29,7 +29,7 @@ export const Cards = ({ href, src, alt, title, desc, link }) => {
         </div>
         </div>
         <div className="flex justify-center w-full transition rounded-b-xl">
-          <button className="flex w-full justify-center font-bold px-3 py-2 bg-gradient-to-b from-[#FF4265] to-[#FE573B] hover:bg-gradient-to-tr hover:from-[black] hover:to-[black] text-white rounded-b-3xl transition-all">
+          <button className="flex w-full justify-center font-bold px-3 py-2 bg-gradient-to-r from-[#FF4265] to-[#ff423c] hover:bg-gradient-to-tr hover:from-[#ff395d] hover:to-[#ff4265b6] text-white rounded-b-3xl transition-all">
             <Link className="flex w-full justify-center items-center gap-2 active:scale-95 transition-all" href={href} target="_blank">
               GO
               <svg

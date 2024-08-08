@@ -15,34 +15,47 @@ export default function Home() {
   const page = "";
   const latestWorkData = [
     {
+      href: "https://orderyourcoffee.vercel.app/",
+      src: "/ordercoffee.png",
+      alt: "Coffee Ordering Mobile Web",
+      title: "Coffee Ordering Mobile Web",
+      subtitle: "Next.js, Tailwind CSS, Javascript, RESTful API",
+      desc: "Mobile web app for coffee ordering using Next.js and Tailwind CSS, integrated with a database via JSON Server. This app allows users to effortlessly browse the menu, place orders for their favorite coffee, and customize their orders. It also includes a voucher discount feature for added savings. Key features include a modern design, real-time data integration, and a seamless ordering process from selection to checkout.",
+      link: "",
+    },
+    {
       href: "https://next-js-todolist-dnd.vercel.app/",
-      src: "/todolist.png",
+      src: "/todolst.png",
       alt: "todo list pict",
       title: "Todo List App",
+      subtitle: "Next.js, Tailwind CSS, Javascript",
       desc: "Todo List with Drag and Drop features uses react-beautiful-dnd saved in localstorage.",
       link: "",
     },
     {
       href: "https://next-js-tailwind-address-book.vercel.app/",
-      src: "/addressbook.png",
+      src: "/addrsbook.png",
       alt: "address book pict",
       title: "Address Book App",
+      subtitle: "Next.js, Tailwind CSS, Javascript",
       desc: "Address Book Website uses Next.js & Tailwind with search engine, infinite scroll, and night mode feature.",
       link: "",
     },
     {
       href: "https://next-js-tailwind-five.vercel.app/",
-      src: "/travel.png",
+      src: "/travlog.png",
       alt: "travel website pict",
       title: "Travel Website",
+      subtitle: "Next.js, Tailwind CSS, Javascript",
       desc: "Responsive Travel Website uses Next.js & Tailwind, slicing from",
       link: "https://www.figma.com/community/file/1242383980771579992",
     },
     {
       href: "https://next-js-tailwind-fashion-ecommerce.vercel.app/",
-      src: "/ecommerce.png",
+      src: "/mdml.png",
       alt: "e-commerce website pict",
       title: "E-commerce Website",
+      subtitle: "Next.js, Tailwind CSS, Javascript",
       desc: `Responsive Fashion E-commerce Website uses Next.js & Tailwind, slicing from`,
       link: "https://www.figma.com/community/file/1285268566121594200",
     },
@@ -291,10 +304,10 @@ export default function Home() {
                     Professional Summary
                   </div>
                   <p className=" text-black pt-6 pb-8 px-12 md:px-24 lg:px-12 text-[18px] font-extrabold rounded-b-xl bg-white leading-[30px]">
-                    Able to ensure that all tasks are performed effectively, appropriately, and
-                    delivered within agreed timescales. Able to work well under
-                    pressure. Consistenly reliable, diligent, and eager to
-                    learn.
+                    Able to ensure that all tasks are performed effectively,
+                    appropriately, and delivered within agreed timescales. Able
+                    to work well under pressure. Consistenly reliable, diligent,
+                    and eager to learn.
                   </p>
                 </div>
               </div>
@@ -369,7 +382,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="sm:mt-[-50px] bg-[#540052] ">
+      <div className="sm:mt-[-50px] bg-[black] ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#FE573B"
@@ -378,7 +391,7 @@ export default function Home() {
           ></path>
         </svg>
       </div>
-      <div className=" sm:mt-[-100px] flex flex-col bg-gradient-to-t from-[#29002A] to-[#540052] min-h-[500px] items-center justify-center">
+      <div className=" sm:mt-[-100px] flex flex-col bg-gradient-to-t from-[#29002A] to-black min-h-[500px] items-center justify-center">
         <div
           id="latestWork"
           className="flex pt-0 sm:pt-20 py-20 justify-center items-center font-extrabold text-[35px] sm:text-[38px] xl:text-[38px]"
@@ -393,15 +406,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="px-4 sm:px-16 md:px-[100px] lg:px-[150px] pb-10 xl:px-[100px] grid grid-cols-1 gap-10 sm:gap-16 auto-rows-auto lg:grid-cols-2 xl:grid-cols-4 lg:gap-8 xl:gap-4 2xl:gap-8 justify-center items-center ">
+        <div className="px-4 sm:px-16 md:px-[100px] lg:px-[100px] pb-10 xl:px-[100px] grid grid-cols-1 gap-10 sm:gap-16 auto-rows-auto lg:grid-cols-2 xl:grid-cols-3 lg:gap-8 xl:gap-8 2xl:gap-8 justify-center items-center ">
           {latestWorkData.map((data, idx) => {
             return (
-              <div key={idx} className="h-full w-full">
+              <div key={idx} className="h-full w-full lg:hover:scale-[98%] transition-all">
                 <Cards
                   href={data.href}
                   src={data.src}
                   alt={data.alt}
                   title={data.title}
+                  subtitle={data.subtitle}
                   desc={data.desc}
                   link={data.link}
                 />
@@ -409,6 +423,7 @@ export default function Home() {
             );
           })}
         </div>
+        
       </div>
       <Footer />
     </>

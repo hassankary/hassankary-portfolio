@@ -82,6 +82,21 @@ export const Header = ({ params }) => {
       });
     }
 
+    if (params === "work") {
+      setBold({
+        ...bold,
+        home: "",
+        about: "",
+        work: "font-bold",
+      });
+      setIsLogo({
+        ...isLogo,
+        home: false,
+        about: false,
+        work: true,
+      });
+    }
+
     if (params === "about") {
       setBold({
         ...bold,
@@ -126,6 +141,12 @@ export const Header = ({ params }) => {
       about: true,
       work: false,
     });
+    if (params === "about") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   const workPage = () => {
@@ -177,16 +198,16 @@ export const Header = ({ params }) => {
           <Link href={"./#home"}>
             <div
               onClick={homePage}
-              className={`${bold?.home} flex h-[53px] space-x-1 hover:text-[#FF4265] transition items-center`}
+              className={`${bold?.home} flex h-[53px] w-[55px] hover:text-[#FF4265] transition items-center`}
             >
               {/* <div className={bold?.home !== "" ? "flex" : "hidden"}><NavLogo height={16} width={16} color={"#FD653D"} /></div> */}
               Home
             </div>
           </Link>
-          <Link href={"./#latestWork"}>
+          <Link href={"./work"}>
             <div
               onClick={workPage}
-              className={`${bold?.work} flex h-[53px] space-x-1 hover:text-[#FF4265] transition items-center`}
+              className={`${bold?.work} flex h-[53px] w-[55px] hover:text-[#FF4265] transition items-center`}
             >
               {/* {isLogo?.about && (<NavLogo height={16} width={16} color={"#FD653D"} />)} */}
               Work
@@ -195,7 +216,7 @@ export const Header = ({ params }) => {
           <Link href={"/about"}>
             <div
               onClick={aboutPage}
-              className={`${bold?.about} flex h-[53px] space-x-1 hover:text-[#FF4265] transition items-center`}
+              className={`${bold?.about} flex h-[53px] w-[55px] hover:text-[#FF4265] transition items-center`}
             >
               {/* {isLogo?.services && (<NavLogo height={16} width={16} color={"#FD653D"} />)} */}
               About
@@ -203,8 +224,12 @@ export const Header = ({ params }) => {
           </Link>
         </div>
         <div className="hidden sm:flex h-[53px] hover:text-[#FF4265] transition-colors space-x-2 items-center font-bold">
-          <Link className="flex space-x-2" href={"mailto:hassanaskary29@gmail.com"}><span>Contact</span>
-          <ContactIcon />
+          <Link
+            className="flex space-x-2"
+            href={"mailto:hassanaskary29@gmail.com"}
+          >
+            <span>Contact</span>
+            <ContactIcon />
           </Link>
         </div>
         <div className="flex justify-start text-slate-50 items-center sm:hidden">
@@ -229,7 +254,11 @@ export const Header = ({ params }) => {
             <Dropdown.Item icon={HiUser} as="a" href={"/about"}>
               About
             </Dropdown.Item>
-            <Dropdown.Item icon={HiPhoneIncoming} as="a" href={"mailto:hassanaskary29@gmail.com"}>
+            <Dropdown.Item
+              icon={HiPhoneIncoming}
+              as="a"
+              href={"mailto:hassanaskary29@gmail.com"}
+            >
               Contact
             </Dropdown.Item>
           </Dropdown>

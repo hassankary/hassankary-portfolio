@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Cards = ({ href, src, alt, title, desc, link, subtitle }) => {
   return (
     <div className="h-fit bg-transparent rounded-3xl shadow-xl">
-      <div className="flex overflow-hidden justify-center items-center rounded-t-3xl bg-gradient-to-t from-[#30102b] to-[#5B0E4E] ">
+      <div className="flex max-h-[400px] overflow-hidden justify-center items-center rounded-t-3xl bg-gradient-to-t from-[#30102b] to-[#5B0E4E] ">
         <Image
           src={src}
           className=" w-full"

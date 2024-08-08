@@ -7,16 +7,13 @@ import {
   IconEducation,
   IconExperience,
   LanguageIcon,
-  LocationIcon,
-  MailIcon,
-  WhatsappIcon,
 } from "@/components/icon/iconAbout";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdMarkEmailUnread, MdOutgoingMail } from "react-icons/md";
 import { IoMdMailOpen } from "react-icons/io";
 import { motion as m } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function About() {
   const page = "about";
@@ -25,6 +22,10 @@ export default function About() {
     experience: false,
     language: false,
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const dataExperience = [
     {
@@ -249,7 +250,7 @@ export default function About() {
                     <div key={idx} className=" border-b-2">
                       <div className="flex flex-col justify-center pb-[5px]">
                         <h1 className="font-bold text-lg">{data.place}</h1>
-                        <h1 className="flex w-fit sm:px-2 my-1 text-lg text-[#FF4268] sm:text-white font-semibold bg-none sm:bg-gradient-to-r from-[#FE573B] to-[#FF4268] rounded-md">
+                        <h1 className="flex w-fit sm:px-2 my-1 text-lg text-[#FF4268] sm:text-white font-semibold bg-none sm:bg-[#FF4268] rounded-md">
                           {data.status}
 
                         </h1>

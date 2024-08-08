@@ -10,13 +10,14 @@ import { ButtonIcon } from "@/components/icon/icon";
 import { Cards } from "@/components/cards/cards";
 import { Carousel } from "flowbite-react";
 import { Footer } from "@/components/Footer";
+import { NewCards } from "@/components/cards/newecards";
 
 export default function Home() {
   const page = "";
   const latestWorkData = [
     {
       href: "https://orderyourcoffee.vercel.app/",
-      src: "/ordercoffee.png",
+      src: "/ordercoffee1.jpg",
       alt: "Coffee Ordering Mobile Web",
       title: "Coffee Ordering Mobile Web",
       subtitle: "Next.js, Tailwind CSS, Javascript, RESTful API",
@@ -25,7 +26,7 @@ export default function Home() {
     },
     {
       href: "https://next-js-todolist-dnd.vercel.app/",
-      src: "/todolst.png",
+      src: "/todolst.jpg",
       alt: "todo list pict",
       title: "Todo List App",
       subtitle: "Next.js, Tailwind CSS, Javascript",
@@ -34,7 +35,7 @@ export default function Home() {
     },
     {
       href: "https://next-js-tailwind-address-book.vercel.app/",
-      src: "/addrsbook.png",
+      src: "/addrsbook.jpg",
       alt: "address book pict",
       title: "Address Book App",
       subtitle: "Next.js, Tailwind CSS, Javascript",
@@ -43,7 +44,7 @@ export default function Home() {
     },
     {
       href: "https://next-js-tailwind-five.vercel.app/",
-      src: "/travlog.png",
+      src: "/travlog.jpg",
       alt: "travel website pict",
       title: "Travel Website",
       subtitle: "Next.js, Tailwind CSS, Javascript",
@@ -52,12 +53,45 @@ export default function Home() {
     },
     {
       href: "https://next-js-tailwind-fashion-ecommerce.vercel.app/",
-      src: "/mdml.png",
+      src: "/mdml.jpg",
       alt: "e-commerce website pict",
       title: "E-commerce Website",
       subtitle: "Next.js, Tailwind CSS, Javascript",
       desc: `Responsive Fashion E-commerce Website uses Next.js & Tailwind, slicing from`,
       link: "https://www.figma.com/community/file/1285268566121594200",
+    },
+  ];
+
+  const mySkills = [
+    {
+      title: "html",
+      color: "bg-[#E0572B]",
+      src: "/./logo_html5.svg",
+    },
+    {
+      title: "css",
+      color: "bg-[#214CE5]",
+      src: "/./logo_css.svg",
+    },
+    {
+      title: "tailwind",
+      color: "bg-[#38BDF8]",
+      src: "/./logo_tailwind.svg",
+    },
+    {
+      title: "javascript",
+      color: "bg-[#F7E025]",
+      src: "/./logo_js.svg",
+    },
+    {
+      title: "react.js",
+      color: "bg-[#61DBFB]",
+      src: "/./logo_react.svg",
+    },
+    {
+      title: "next.js",
+      color: "bg-black",
+      src: "/./logo_nextjs.svg",
     },
   ];
 
@@ -318,62 +352,29 @@ export default function Home() {
                   </div>
                   <div className="flex-col text-center text-white pt-6 pb-8 px-12 md:px-24 lg:px-12 text-[10px] sm:text-[13px] md:text-[18px] lg:text-[15px] xl:text-[18px] font-extrabold rounded-b-xl bg-white leading-[30px]">
                     <div className="flex items-center justify-center max-h-9 space-x-[1%]">
-                      <div className="flex justify-center items-center bg-[#E0572B] rounded-lg px-2 py-1">
-                        HTML
-                      </div>
-                      <div className="flex justify-center items-center bg-[#214CE5] rounded-lg px-2 py-1">
-                        CSS
-                      </div>
-                      <div className="flex justify-center items-center bg-[#38BDF8] rounded-lg px-2 py-1">
-                        Tailwind
-                      </div>
-                      <div className="flex justify-center items-center bg-[#F7E025] rounded-lg px-2 py-1">
-                        Javascript
-                      </div>
-                      <div className="flex justify-center items-center bg-[#61DBFB] rounded-lg px-2 py-1">
-                        React.js
-                      </div>
-                      <div className="flex justify-center items-center bg-black rounded-lg px-2 py-1">
-                        Next.js
-                      </div>
+                      {mySkills.map((d, i) => {
+                        return (
+                          <div
+                            key={i}
+                            className={`flex justify-center items-center ${d.color} rounded-lg px-2 py-1`}
+                          >
+                            {d.title}
+                          </div>
+                        );
+                      })}
                     </div>
                     <div className="flex justify-center space-x-2 mt-4">
-                      <Image
-                        src={"/./logo_html5.svg"}
-                        width={30}
-                        height={30}
-                        alt="logo html"
-                      />
-                      <Image
-                        src={"/./logo_css.svg"}
-                        width={30}
-                        height={30}
-                        alt="logo css"
-                      />
-                      <Image
-                        src={"/./logo_tailwind.svg"}
-                        width={30}
-                        height={30}
-                        alt="logo tailwind"
-                      />
-                      <Image
-                        src={"/./logo_js.svg"}
-                        width={30}
-                        height={30}
-                        alt="logo javascript"
-                      />
-                      <Image
-                        src={"/./logo_react.svg"}
-                        width={30}
-                        height={30}
-                        alt="logo react js"
-                      />
-                      <Image
-                        src={"/./logo_nextjs.svg"}
-                        width={30}
-                        height={30}
-                        alt="logo next js"
-                      />
+                      {mySkills.map((d, i) => {
+                        return (
+                          <Image
+                            key={i}
+                            src={d.src}
+                            width={30}
+                            height={30}
+                            alt={`logo ${d.title}`}
+                          />
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -394,7 +395,7 @@ export default function Home() {
       <div className=" sm:mt-[-100px] flex flex-col bg-gradient-to-t from-[#29002A] to-black min-h-[500px] items-center justify-center">
         <div
           id="latestWork"
-          className="flex pt-0 sm:pt-20 py-20 justify-center items-center font-extrabold text-[35px] sm:text-[38px] xl:text-[38px]"
+          className="flex pt-0 sm:pt-20 py-[65px] md:py-20 justify-center items-center font-extrabold text-[35px] sm:text-[38px] xl:text-[38px]"
         >
           <div className="flex border-white border-b-4 text-center items-center text-white ">
             <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
@@ -406,11 +407,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="px-4 sm:px-16 md:px-[100px] lg:px-[100px] pb-10 xl:px-[100px] grid grid-cols-1 gap-10 sm:gap-16 auto-rows-auto lg:grid-cols-2 xl:grid-cols-3 lg:gap-8 xl:gap-8 2xl:gap-8 justify-center items-center ">
-          {latestWorkData.map((data, idx) => {
+        <div className="hidden px-4 sm:px-16 md:px-[100px] lg:px-[20%] pb-10 md:grid grid-cols-1 gap-10 justify-center items-center ">
+          {latestWorkData.slice(0, 1).map((data, idx) => {
             return (
-              <div key={idx} className="h-full w-full lg:hover:scale-[98%] transition-all">
-                <Cards
+              <div
+                key={idx}
+                className="flex h-full w-full lg:hover:scale-[98%] transition-all"
+              >
+                <NewCards
                   href={data.href}
                   src={data.src}
                   alt={data.alt}
@@ -423,7 +427,33 @@ export default function Home() {
             );
           })}
         </div>
-        
+        <div className="md:hidden px-4 sm:px-16 md:px-[100px] lg:px-[100px] pb-10 xl:px-[100px] grid grid-cols-1 gap-10 sm:gap-16 auto-rows-auto lg:grid-cols-2 xl:grid-cols-3 lg:gap-8 xl:gap-8 2xl:gap-8 justify-center items-center ">
+          {latestWorkData.slice(0, 1).map((data, idx) => {
+            return (
+              <div
+                key={idx}
+                className="h-full w-full lg:hover:scale-[98%] transition-all"
+              >
+                <Cards
+                  href={data.href}
+                  src={"/ordercoffee2.jpg"}
+                  alt={data.alt}
+                  title={data.title}
+                  subtitle={data.subtitle}
+                  desc={data.desc}
+                  link={data.link}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className="font-bold text-lg py-2">
+          <Link href={"/work"}>
+            <h1 className="text-white hover:text-[#FF4265] active:text-[#FF4265] active:scale-[95%] transition-all">
+              See More...
+            </h1>
+          </Link>
+        </div>
       </div>
       <Footer />
     </>

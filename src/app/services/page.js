@@ -5,6 +5,8 @@ import { Header } from "@/components/Header";
 import { ButtonIcon } from "@/components/icon/icon";
 import { LogoFooter } from "@/components/LogoFooter";
 import { Carousel } from "flowbite-react";
+import Lottie from "lottie-react";
+import machine from "../../../src/machine.json";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +15,7 @@ export default function Services() {
   const latestWorkData = [
     {
       href: "https://orderyourcoffee.vercel.app/",
-      src: "/ordercoffee.png",
+      src: "/ordercoffee.jpg",
       alt: "Coffee Ordering Mobile Web",
       title: "Coffee Ordering Mobile Web",
       subtitle: "Next.js, Tailwind CSS, Javascript, RESTful API",
@@ -22,7 +24,7 @@ export default function Services() {
     },
     {
       href: "https://next-js-todolist-dnd.vercel.app/",
-      src: "/todolst.png",
+      src: "/todolst.jpg",
       alt: "todo list pict",
       title: "Todo List App",
       subtitle: "Next.js, Tailwind CSS, Javascript",
@@ -31,7 +33,7 @@ export default function Services() {
     },
     {
       href: "https://next-js-tailwind-address-book.vercel.app/",
-      src: "/addrsbook.png",
+      src: "/addrsbook.jpg",
       alt: "address book pict",
       title: "Address Book App",
       subtitle: "Next.js, Tailwind CSS, Javascript",
@@ -40,7 +42,7 @@ export default function Services() {
     },
     {
       href: "https://next-js-tailwind-five.vercel.app/",
-      src: "/travlog.png",
+      src: "/travlog.jpg",
       alt: "travel website pict",
       title: "Travel Website",
       subtitle: "Next.js, Tailwind CSS, Javascript",
@@ -49,7 +51,7 @@ export default function Services() {
     },
     {
       href: "https://next-js-tailwind-fashion-ecommerce.vercel.app/",
-      src: "/mdml.png",
+      src: "/mdml.jpg",
       alt: "e-commerce website pict",
       title: "E-commerce Website",
       subtitle: "Next.js, Tailwind CSS, Javascript",
@@ -84,7 +86,6 @@ export default function Services() {
       alt: "logo Instagram",
     },
   ];
-  
 
   const ThisCard = ({ href, src, alt, title, desc, link, subtitle }) => {
     return (
@@ -185,6 +186,20 @@ export default function Services() {
     <>
       <Header params={page} />
       <div className="flex flex-col py-[109px] bg-gradient-to-t from-[black] to-[#3a3737] min-h-screen justify-center sm:px-[5%] md:px-[80px] lg:px-[10%] ">
+          <div
+            id="latestWork"
+            className="flex pb-10 justify-center items-center font-extrabold text-[35px] sm:text-[38px] xl:text-[38px]"
+          >
+            <div className="flex border-white border-b-4 text-center items-center text-white ">
+              <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
+                <Lottie animationData={machine}></Lottie>
+              </div>
+              <span>Latest Work</span>
+              <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
+                <Lottie animationData={machine}></Lottie>
+              </div>
+            </div>
+          </div>
         <div className="flex py-[50px] justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-[0]">
             {latestWorkData.map((data, idx) => {
@@ -204,7 +219,7 @@ export default function Services() {
             })}
           </div>
         </div>
-        <div className="hidden md:flex md:flex-col">
+        {/* <div className="hidden md:flex md:flex-col">
           <div className="h-[700px]">
             <Carousel>
               {myArr.map((data, i) => {
@@ -218,7 +233,7 @@ export default function Services() {
               })}
             </Carousel>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="bg-white">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -243,9 +258,10 @@ export default function Services() {
             );
           })}
         </div>
-        <div className="w-full text-center font-bold text-base sm:text-lg py-[40px] sm:py-[60px] text-black">Copyright &copy; 2023 Hassan Askary.</div>
+        <div className="w-full text-center font-bold text-base sm:text-lg py-[40px] sm:py-[60px] text-black">
+          Copyright &copy; 2023 Hassan Askary.
+        </div>
       </div>
-
     </>
   );
 }

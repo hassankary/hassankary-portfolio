@@ -247,7 +247,7 @@ export const Header = ({ params }) => {
             <Dropdown.Item
               icon={HiDesktopComputer}
               as="a"
-              href={"./#latestWork"}
+              href={"./work"}
             >
               Latest Work
             </Dropdown.Item>

@@ -7,6 +7,7 @@ import Lottie from "lottie-react";
 import machine from "../../../src/machine.json";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Services() {
   const page = "work";
@@ -17,7 +18,7 @@ export default function Services() {
       alt: "Coffee Ordering Mobile Web",
       title: "Coffee Ordering Mobile Web",
       subtitle: "Next.js, Tailwind CSS, Javascript, RESTful API",
-      desc: "Mobile web app for coffee ordering using Next.js and Tailwind CSS, integrated with a database via JSON Server. This app allows users to effortlessly browse the menu, place orders for their favorite coffee, and customize their orders. It also includes a voucher discount feature for added savings. Key features include a modern design, real-time data integration, and a seamless ordering process from selection to checkout.",
+      desc: "Mobile web app for coffee ordering, built with Next.js and Tailwind CSS, and integrated with a database via JSON Server. This app allows users to effortlessly browse the menu, place orders for their favorite coffee, and customize their orders. It also includes a voucher discount feature for added savings. Key features include a modern design, real-time data integration, and a seamless ordering process from selection to checkout.",
       link: "",
     },
     {
@@ -26,16 +27,16 @@ export default function Services() {
       alt: "todo list pict",
       title: "Todo List App",
       subtitle: "Next.js, Tailwind CSS, Javascript",
-      desc: "Todo List with Drag and Drop features uses react-beautiful-dnd saved in localstorage.",
+      desc: "Todo List Application built with Next.js, featuring drag-and-drop functionality. Implemented drag-and-drop interactions using the `react-beautiful-dnd` library to allow users to reorder tasks effortlessly. Integrated `localStorage` to persist user data, ensuring that todo items and their order are retained across page reloads. The user-friendly interface supports task management with options to add, edit, delete, and mark tasks as completed.",
       link: "",
     },
     {
       href: "https://next-js-tailwind-address-book.vercel.app/",
       src: "/addrsbook.jpg",
       alt: "address book pict",
-      title: "Address Book App",
+      title: "Address Book Website",
       subtitle: "Next.js, Tailwind CSS, Javascript",
-      desc: "Address Book Website uses Next.js & Tailwind with search engine, infinite scroll, and night mode feature.",
+      desc: "Address Book website built with Next.js, utilizing open source APIs, featuring search functionality, infinite scroll, and night mode",
       link: "",
     },
     {
@@ -194,10 +195,10 @@ export default function Services() {
   return (
     <>
       <Header params={page} />
-      <div className="flex flex-col py-[109px] bg-gradient-to-t from-[black] to-[#3a3737] min-h-screen justify-center sm:px-[5%] md:px-[80px] lg:px-[10%] ">
+      <div className="flex flex-col py-[75px] sm:py-[109px] bg-gradient-to-t from-[black] to-[#575353] min-h-screen justify-center sm:px-[5%] md:px-[80px] lg:px-[10%] ">
         <div
           id="latestWork"
-          className="flex pb-10 justify-center items-center font-extrabold text-[35px] sm:text-[38px] xl:text-[38px]"
+          className="flex pb-[65px] sm:pb-20 justify-center items-center font-extrabold text-[35px] sm:text-[38px] xl:text-[38px]"
         >
           <div className="flex border-white border-b-4 text-center items-center text-white ">
             <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
@@ -209,11 +210,11 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="flex py-[50px] justify-center">
+        <div className="flex justify-center">
           <div className="grid grid-cols-1 gap-8 sm:gap-10 md:gap-14 lg:gap-20 px-4 md:px-[0]">
             {latestWorkData.map((data, idx) => {
               return (
-                <div key={idx} className="h-full w-full">
+                <div key={idx} className="h-full w-full max-w-3xl">
                   <ThisCard
                     href={data.href}
                     src={data.src}
@@ -274,5 +275,3 @@ export default function Services() {
     </>
   );
 }
-
-

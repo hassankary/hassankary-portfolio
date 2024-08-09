@@ -17,7 +17,7 @@ export const NewCards = ({ href, src, alt, title, desc, link, subtitle }) => {
           ></Image>
         </div>
         <div className="flex flex-col w-1/2 ">
-          <div className="flex h-full py-4 overflow-hidden bg-white rounded-tr-3xl">
+          <div className="flex h-full py-5 overflow-hidden bg-white rounded-tr-3xl">
             <div className="flex-col h-full px-9 overflow-auto">
               <div className="pb-4">
                 <h1 className="truncate overflow-hidden text-black text-[20px] font-extrabold ">

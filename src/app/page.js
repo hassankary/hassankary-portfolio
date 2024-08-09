@@ -10,7 +10,7 @@ import { ButtonIcon } from "@/components/icon/icon";
 import { Cards } from "@/components/cards/cards";
 import { Carousel } from "flowbite-react";
 import { Footer } from "@/components/Footer";
-import { NewCards } from "@/components/cards/newecards";
+import { NewCards } from "@/components/cards/newcards";
 
 export default function Home() {
   const page = "";
@@ -21,7 +21,7 @@ export default function Home() {
       alt: "Coffee Ordering Mobile Web",
       title: "Coffee Ordering Mobile Web",
       subtitle: "Next.js, Tailwind CSS, Javascript, RESTful API",
-      desc: "Mobile web app for coffee ordering using Next.js and Tailwind CSS, integrated with a database via JSON Server. This app allows users to effortlessly browse the menu, place orders for their favorite coffee, and customize their orders. It also includes a voucher discount feature for added savings. Key features include a modern design, real-time data integration, and a seamless ordering process from selection to checkout.",
+      desc: "Mobile web app for coffee ordering, built with Next.js and Tailwind CSS, and integrated with a database via JSON Server. This app allows users to effortlessly browse the menu, place orders for their favorite coffee, and customize their orders. It also includes a voucher discount feature for added savings. Key features include a modern design, real-time data integration, and a seamless ordering process from selection to checkout.",
       link: "",
     },
     {
